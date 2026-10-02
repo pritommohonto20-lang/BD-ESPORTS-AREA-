@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BD ESPORTS AREA • Tournament</title><link rel="stylesheet" href="/style.css"></head>
+<body><div class="glow"></div><main>
+<header><div class="logoText">BD <span>ESPORTS</span> AREA</div><button class="pill" onclick="document.querySelector('#form').scrollIntoView({behavior:'smooth'})">● DETAILS</button></header>
+<section class="hero"><div class="tag">BANGLADESH • ESPORTS PLATFORM</div><h1>TEAM FORM</h1><p>Register your squad for the next battle.</p></section>
+<section class="grid"><div><small>MAP</small><b>Kalahari /<br>Purgatory</b></div><div><small>MODE</small><b>3 Matches</b></div></section>
+<section class="card" id="form"><h3>IDENTITY / INSIGNIA</h3>
+<form id="regForm" enctype="multipart/form-data">
+<label class="upload"><input name="logo" type="file" accept="image/png,image/jpeg,image/webp"><span id="uploadLabel">▧<br><em>UPLOAD TEAM LOGO</em></span><img id="preview"></label>
+<input name="teamName" placeholder="TEAM NAME" required><input name="leaderName" placeholder="LEADER NAME" required><input name="leaderUid" placeholder="LEADER UID" inputmode="numeric" required>
+<h3>SQUAD MEMBERS</h3>
+<input name="p2Name" placeholder="PLAYER 2 NAME" required><input name="p2Uid" placeholder="PLAYER 2 UID" inputmode="numeric" required>
+<input name="p3Name" placeholder="PLAYER 3 NAME" required><input name="p3Uid" placeholder="PLAYER 3 UID" inputmode="numeric" required>
+<input name="p4Name" placeholder="PLAYER 4 NAME" required><input name="p4Uid" placeholder="PLAYER 4 UID" inputmode="numeric" required>
+<button class="yellow">CONFIRM REGISTRATION →</button><p id="msg"></p></form></section>
+<section class="success hidden" id="success"><div class="big">SUCCESS</div><p>MISSION DEPLOYMENT CONFIRMED.<br>TRANSFERRING...</p>
+<div class="timer"><div><b id="d">00</b><small>DAYS</small></div><div><b id="h">00</b><small>HOURS</small></div><div><b id="m">00</b><small>MINS</small></div><div><b id="s">00</b><small>SECS</small></div></div>
+<button class="details" onclick="openMyDetails()">♙ &nbsp; MY DETAILS<br><small>আমার তথ্য দেখুন</small></button>
+<div class="room"><div class="lock">▢</div><h2>ROOM PROTOCOL LOCKED</h2><p>ROOM SCHEDULED: UNLOCK WILL OPEN IN<br><strong id="roomTime">--</strong></p>
+<button class="yellow" onclick="getRoom()">⚿ &nbsp; UNLOCK ROOM DETAILS</button><div class="green">SLOTS REMAINING: <b id="remain">--</b><br>YOUR SHIELD SEQUENCE: <b id="seq">#----</b></div></div>
+<div id="roomInfo" class="roomInfo hidden"></div></section></main>
+<dialog id="dlg"><div id="dlgBody"></div><button class="dark" onclick="dlg.close()">CLOSE</button></dialog>
+<script src="/app.js"></script></body></html>
